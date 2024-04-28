@@ -39,10 +39,10 @@ To change port of socket to expose on server and listen on frontend:
 To change Twitter authentication keys, edit server.js line 40:
 ```javascript
 var clientTw = new Twitter({
-    consumer_key: 'v8YxY292pnVTZ7yXYRXMa2QE9',
-    consumer_secret: '0W5wJPrPwPaHCVjjBUiy6LCelIdmrt0XiM1pllufnYmMWVnelo',
-    access_token_key: '299634200-MKZTBg4aTJvdBxatAcbs34AgAovqlaRmaF31G4FF',
-    access_token_secret: 'v77XNxzxKUkWfgbUYeBD3s3Bvu8FyhxFd15Uup0siwHHk'
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '',
+    access_token_secret: ''
 });
 ```
 Get start to create your own Twitter app and get authentication keys here https://apps.twitter.com/ . Create new app you you does not have one. Then get the keys from this app.

@@ -49,4 +49,19 @@ The app uses Express.js to serve web pages, streams data from Twitter using a No
       access_token_key: 'your_access_token_key',
       access_token_secret: 'your_access_token_secret'
   });
+- **API Keys**: Obtain your keys by creating an app at Twitter Apps.
+
+## App Logic
+- **To install the necessary dependencies, run the following command in your project directory: npm install
+
+
+## Running the Application
+- **To start the server and begin using the application, execute: node server.js
+- **Navigate to http://localhost:8080 (or whichever port you have configured) on your web browser to access the application.
+
+
+
+
+
+
 

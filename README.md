@@ -1,56 +1,29 @@
-# Twitter Search App
+Twitter Search App
+This Node.js application allows users to search and stream Twitter feeds based on specific keywords or geographical locations. The streamed tweets are saved into MongoDB for persistence and displayed in real-time on a web interface.
 
-## Brief of technologies:
+Features
+Real-time streaming of tweets based on user-specified keywords or locations.
+Tweets data storage using MongoDB.
+Real-time display of tweets on a web interface.
+Search functionality within the stored tweets.
 
-### Server Backend:
-**ExpressJs** Web application framework to build web application on node.js (http://expressjs.com/)  
-**socket.io** To communicate in realtime between backend server and frontend without refreshing page (http://socket.io/)  
-**twitter** nodejs library to stream data from Twitter (https://www.npmjs.com/package/twitter)  
-**mongoose** Model nodejs library to work with MongoDB database (http://mongoosejs.com/)  
+Technologies Overview
+Server Backend
+ExpressJs: A web application framework for building web applications on Node.js. ExpressJs
+socket.io: Enables real-time communication between the backend server and frontend without page refreshes. socket.io
+twitter: A Node.js library to stream data from Twitter. twitter on npm
+mongoose: A modeling library for MongoDB and Node.js. mongoose
+Database
+MongoDB: A NoSQL database. Install MongoDB on your machine from MongoDB.
+Frontend
+AngularJS: A JavaScript framework for building user interfaces. AngularJS
+Bootstrap: A framework for building responsive websites across different devices. Bootstrap
+jQuery: A fast, small, and feature-rich JavaScript library. jQuery
+Data Model
+models/tweet.js: Manage your MongoDB connection string here. The default is mongodb://localhost/tweets. Change localhost to localhost:PORT_NUMBER if necessary.
+App Logic
+The app uses Express.js to serve web pages, streams data from Twitter using a Node.js library, and employs socket.io to transfer data in real time as it is received from the Twitter stream.
 
-### Database
-**MongoDB** data storage, install it on your machine(https://www.mongodb.org/).
-
-### Frontend:
-**angularjs** Javascript framework on frontend to build UI (https://angularjs.org/)
-**Bootstrap** Building website in responsive to have good looking on difference devices such as desktop browser, mobile browser, tablet browser....
-**jQuery** Fast, small, and feature-rich JavaScript library (https://jquery.com/)
-
-### Data model
-**models/tweet.js**
-You can change connection string there, default setup of mongodb is as current string(mongodb://localhost/tweets). If you have your own MongoDB opened port just change *localhost* to *localhost:PORT_NUMBER*
-
-### Basic logic of the app:
-Expressjs to run web application. Twitter nodejs library to stream data from Twitter into web application then use socket.io to stransfer data in realtime once backend receive data from Twitter stream.
-
-### To start app, issue command:
-node server.js
-
-### Edit if you want:
-To change port of the web application, edit line 33 *app.listen(8080);* :  
-In server.js file, replace 8080 to whatever you want.  
-You will browser the application on this port on your browser (eg, http://location:8080)  
-In models/tweet.js, replace *tweets* in mongodb://localhost/tweets if you want to change the database name where you want to store the data from Twitter
-
-To change port of socket to expose on server and listen on frontend:  
-* In server.js line 16 *server.listen('8000');* is the socket server port, change to whatever number you want.  
-* In public/index.html line 15 *<script src="//localhost:8000/socket.io/socket.io.js"></script>* change 8080 to the the same number has been changed above for the socket server port. Warning: This number required to have the same number with server socket port.
-
-To change Twitter authentication keys, edit server.js line 40:
-```javascript
-var clientTw = new Twitter({
-    consumer_key: '',
-    consumer_secret: '',
-    access_token_key: '',
-    access_token_secret: ''
-});
-```
-Get start to create your own Twitter app and get authentication keys here https://apps.twitter.com/ . Create new app you you does not have one. Then get the keys from this app.
-
-**Note**
-Incase there is any error when start app with *node server.js*
-Delete **node_modules** folder and issue the following commands:
-npm install
-node server.js
-
-To start app again!
+Getting Started
+Installation
+To install dependencies:

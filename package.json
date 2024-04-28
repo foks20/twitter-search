@@ -1,0 +1,20 @@
+{
+  "name": "twittersearch",
+  "version": "0.0.1",
+  "description": "A Node.js Twitter Search App using express and AngularJs",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "*",
+    "mongoose": "^4.4.12",
+    "socket.io": "^1.4.5",
+    "twitter": "^1.2.5"
+  },
+  "engine": "node >=0.6.x",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "canhnm@opensource.com.vn",
+  "license": "ISC"
+}

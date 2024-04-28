@@ -38,10 +38,10 @@ io.on('connection', function(socket) {
 	socket.on('searchSubmit', function(data) {
 		//defined twitter api keys. Get it here https://apps.twitter.com/ .Create new app you you does not have one. Then get the keys from this app.
 		var clientTw = new Twitter({
-			consumer_key: 'v8YxY292pnVTZ7yXYRXMa2QE9',
-			consumer_secret: '0W5wJPrPwPaHCVjjBUiy6LCelIdmrt0XiM1pllufnYmMWVnelo',
-			access_token_key: '299634200-MKZTBg4aTJvdBxatAcbs34AgAovqlaRmaF31G4FF',
-			access_token_secret: 'v77XNxzxKUkWfgbUYeBD3s3Bvu8FyhxFd15Uup0siwHHk'
+			consumer_key: '',
+			consumer_secret: '',
+			access_token_key: '',
+			access_token_secret: ''
 		});
 
 		//default search in this location when no query input

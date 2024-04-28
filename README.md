@@ -31,9 +31,22 @@ This Node.js application allows users to search and stream Twitter feeds based o
 ## App Logic
 The app uses Express.js to serve web pages, streams data from Twitter using a Node.js library, and employs socket.io to transfer data in real time as it is received from the Twitter stream.
 
-## Getting Started
+## Configuration
 
-### Installation
-To install dependencies:
-```bash
-npm install
+### Server Configuration
+- **Application Port**: Change the server's listening port by modifying `app.listen(8080);` in `server.js` to any port you prefer.
+- **Socket Server Port**: For real-time updates, adjust the socket server's listening port in `server.listen('8000');` in `server.js`. Make sure to update the port in `public/index.html` to match this setting.
+
+### Database Configuration
+- **Connection String**: Update the MongoDB connection string in `models/tweet.js`. The default is set to `mongodb://localhost/tweets`. Modify `localhost` to your MongoDB server's IP and port as needed.
+
+### Twitter API Configuration
+- **API Keys**: Set up your Twitter API credentials in `server.js`:
+  ```javascript
+  var clientTw = new Twitter({
+      consumer_key: 'your_consumer_key',
+      consumer_secret: 'your_consumer_secret',
+      access_token_key: 'your_access_token_key',
+      access_token_secret: 'your_access_token_secret'
+  });
+

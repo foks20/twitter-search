@@ -1,67 +1,58 @@
-# Twitter Search App
-
-This Node.js application allows users to search and stream Twitter feeds based on specific keywords or geographical locations. The streamed tweets are saved into MongoDB for persistence and displayed in real-time on a web interface.
-
-## Features
-
-- Real-time streaming of tweets based on user-specified keywords or locations.
-- Tweets data storage using MongoDB.
-- Real-time display of tweets on a web interface.
-- Search functionality within the stored tweets.
-
-## Technologies Overview
-
-### Server Backend
-- **ExpressJs**: A web application framework for building web applications on Node.js. [ExpressJs](http://expressjs.com/)
-- **socket.io**: Enables real-time communication between the backend server and frontend without page refreshes. [socket.io](http://socket.io/)
-- **twitter**: A Node.js library to stream data from Twitter. [twitter on npm](https://www.npmjs.com/package/twitter)
-- **mongoose**: A modeling library for MongoDB and Node.js. [mongoose](http://mongoosejs.com/)
-
-### Database
-- **MongoDB**: A NoSQL database. Install MongoDB on your machine from [MongoDB](https://www.mongodb.org/).
-
-### Frontend
-- **AngularJS**: A JavaScript framework for building user interfaces. [AngularJS](https://angularjs.org/)
-- **Bootstrap**: A framework for building responsive websites across different devices. [Bootstrap](https://getbootstrap.com/)
-- **jQuery**: A fast, small, and feature-rich JavaScript library. [jQuery](https://jquery.com/)
-
-### Data Model
-- **models/tweet.js**: Manage your MongoDB connection string here. The default is `mongodb://localhost/tweets`. Change `localhost` to `localhost:PORT_NUMBER` if necessary.
-
-## App Logic
-The app uses Express.js to serve web pages, streams data from Twitter using a Node.js library, and employs socket.io to transfer data in real time as it is received from the Twitter stream.
-
-## Configuration
-
-### Server Configuration
-- **Application Port**: Change the server's listening port by modifying `app.listen(8080);` in `server.js` to any port you prefer.
-- **Socket Server Port**: For real-time updates, adjust the socket server's listening port in `server.listen('8000');` in `server.js`. Make sure to update the port in `public/index.html` to match this setting.
-
-### Database Configuration
-- **Connection String**: Update the MongoDB connection string in `models/tweet.js`. The default is set to `mongodb://localhost/tweets`. Modify `localhost` to your MongoDB server's IP and port as needed.
-
-### Twitter API Configuration
-- **API Keys**: Set up your Twitter API credentials in `server.js`:
-  ```javascript
-  var clientTw = new Twitter({
-      consumer_key: 'your_consumer_key',
-      consumer_secret: 'your_consumer_secret',
-      access_token_key: 'your_access_token_key',
-      access_token_secret: 'your_access_token_secret'
-  });
-- **API Keys**: Obtain your keys by creating an app at Twitter Apps.
-
-## App Logic
-- **To install the necessary dependencies, run the following command in your project directory: npm install
 
 
-## Running the Application
-- **To start the server and begin using the application, execute: node server.js
-- **Navigate to http://localhost:8080 (or whichever port you have configured) on your web browser to access the application.
+# React IOS Calculator
+
+This project recreates the iconic iOS calculator interface using ReactJS. Designed to mimic the look and functionality of the native iOS calculator, this application provides a familiar user experience for desktop web browsers. 
 
 
+## Requirements
 
+v16.17.0
 
+## Usage
 
+1. clone project   
+2. open project `cd twitter-search
+3. install npm `npm i`
+4. to start app `node server.js`
 
+## Edit if you want:
+To change port of the web application, edit line 30 *app.listen(8080);* :
+In server.js file, replace 8080 to whatever you want.
+You will browser the application on this port on your browser (eg, http://location:8080)
 
+To change Twitter authentication keys, edit server.js line 37:
+```javascript
+var clientTw = new Twitter({
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '',
+    access_token_secret: ''
+});
+```
+Get start to create your own Twitter app and get authentication keys here https://apps.twitter.com/ . Create new app you you does not have one. Then get the keys from this app.
+
+**Note**
+Incase there is any error when start app with *node server.js*
+Delete **node_modules** folder and issue the following commands:
+npm install
+node server.js
+
+To start app again!
+
+## Credits
+ 
+Developer - Samuel Fok (@foks20)
+
+ 
+## License
+ 
+The MIT License (MIT)
+
+Copyright (c) 2015 Samuel Fok
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

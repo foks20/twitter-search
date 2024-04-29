@@ -12,7 +12,7 @@ v16.17.0
 ## Usage
 
 1. clone project   
-2. open project `cd twitter-search
+2. open project `cd twitter-search`
 3. install npm `npm i`
 4. to start app `node server.js`
 

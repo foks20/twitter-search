@@ -7,7 +7,7 @@ This project recreates the iconic iOS calculator interface using ReactJS. Design
 
 ## Requirements
 
-v16.17.0
+node v16.17.0
 
 ## Usage
 
